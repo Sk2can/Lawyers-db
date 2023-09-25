@@ -1,0 +1,107 @@
+{
+    "Specs": [
+        "Cardiologist",
+        "Surgeon",
+        "Therapist",
+        "Neurologist",
+        "Otolaryngologist",
+        "Pediatrician"
+    ],
+    "Doctors": {
+        "Cardiologist": [
+            {
+                "Name": "Andrey",
+                "Surname": "Shvetsov",
+                "Patronymic": "Aleksandrovich",
+                "Cabinet": "135",
+                "Experience": "4"
+            }
+        ],
+        "Surgeon": [
+            {
+                "Name": "Aleksandr",
+                "Surname": "Tikhonov",
+                "Patronymic": "Daniilovich",
+                "Cabinet": "356",
+                "Experience": "10"
+            }
+        ],
+        "Therapist": [
+            {
+                "Name": "Stanislav",
+                "Surname": "Rusakov",
+                "Patronymic": "Tikhonovich",
+                "Cabinet": "325",
+                "Experience": "14"
+            }
+        ],
+        "Neurologist": [
+            {
+                "Name": "Iaroslav",
+                "Surname": "Popov",
+                "Patronymic": "Dmitrievich",
+                "Cabinet": "353",
+                "Experience": "6"
+            },
+            {
+                "Name": "Evgeniy",
+                "Surname": "Smirnov",
+                "Patronymic": "Kirilovich",
+                "Cabinet": "438",
+                "Experience": "5"
+            }
+        ],
+        "Otolaryngologist": [
+            {
+                "Name": "Egor",
+                "Surname": "Zinchenko",
+                "Patronymic": "Efremovich",
+                "Cabinet": "134",
+                "Experience": "3"
+            }
+        ],
+        "Pediatrician": [
+            {
+                "Name": "Ivan",
+                "Surname": "Seliverstov",
+                "Patronymic": "Evgenievich",
+                "Cabinet": "254",
+                "Experience": "2"
+            }
+        ]
+    },
+    "Patients": [
+        {
+            "Name": "Ivan",
+            "Surname": "Karasev ",
+            "Patronymic": "Artyomovich",
+            "SNILS": "86509516841",
+            "OMS": "7049254521824547",
+            "Passport": "4490618820"
+        },
+        {
+            "Name": "Yana",
+            "Surname": "Potapova",
+            "Patronymic": "Sergeevna",
+            "SNILS": "74708502006",
+            "OMS": "4699244290334800",
+            "Passport": "4454216997"
+        },
+        {
+            "Name": "Elizaveta ",
+            "Surname": "Belova ",
+            "Patronymic": "Semyonovna",
+            "SNILS": "14274932368",
+            "OMS": "7735727585009991",
+            "Passport": "4738689701"
+        },
+        {
+            "Name": "Vadim ",
+            "Surname": "Kozlov ",
+            "Patronymic": "Kirillovich",
+            "SNILS": "54462899733",
+            "OMS": "7989442379728313",
+            "Passport": "4696413133"
+        }
+    ]
+}
