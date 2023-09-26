@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\khmel\Desktop\Projects\patients_record\UI\deleteWindow.ui'
+# Form implementation generated from reading ui file 'C:\Users\khmel\Desktop\Projects\patients_record\UI\deleteDocWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -9,14 +9,14 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_DeleteWindow(object):
-    def setupUi(self, DeleteWindow):
-        DeleteWindow.setObjectName("DeleteWindow")
-        DeleteWindow.resize(400, 300)
-        self.pushButton = QtWidgets.QPushButton(parent=DeleteWindow)
+class Ui_DeleteDocWindow(object):
+    def setupUi(self, DeleteDocWindow):
+        DeleteDocWindow.setObjectName("DeleteDocWindow")
+        DeleteDocWindow.resize(400, 300)
+        self.pushButton = QtWidgets.QPushButton(parent=DeleteDocWindow)
         self.pushButton.setGeometry(QtCore.QRect(200, 260, 75, 24))
         self.pushButton.setObjectName("pushButton")
-        self.layoutWidget = QtWidgets.QWidget(parent=DeleteWindow)
+        self.layoutWidget = QtWidgets.QWidget(parent=DeleteDocWindow)
         self.layoutWidget.setGeometry(QtCore.QRect(50, 20, 258, 216))
         self.layoutWidget.setObjectName("layoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget)
@@ -29,11 +29,11 @@ class Ui_DeleteWindow(object):
         self.doctors_list.setObjectName("doctors_list")
         self.verticalLayout.addWidget(self.doctors_list)
 
-        self.retranslateUi(DeleteWindow)
-        QtCore.QMetaObject.connectSlotsByName(DeleteWindow)
+        self.retranslateUi(DeleteDocWindow)
+        QtCore.QMetaObject.connectSlotsByName(DeleteDocWindow)
 
-    def retranslateUi(self, DeleteWindow):
+    def retranslateUi(self, DeleteDocWindow):
         _translate = QtCore.QCoreApplication.translate
-        DeleteWindow.setWindowTitle(_translate("DeleteWindow", "Удаление врача"))
-        self.pushButton.setText(_translate("DeleteWindow", "Удалить"))
-        self.label.setText(_translate("DeleteWindow", "Список Врачей"))
+        DeleteDocWindow.setWindowTitle(_translate("DeleteDocWindow", "Удаление врача"))
+        self.pushButton.setText(_translate("DeleteDocWindow", "Удалить"))
+        self.label.setText(_translate("DeleteDocWindow", "Список Врачей"))

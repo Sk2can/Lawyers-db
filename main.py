@@ -1,25 +1,56 @@
 import ctypes
 import json
-import datetime
+from datetime import date
 import sys
 
-from MainWindow import *
-from addRecordWindow import *
-from addDocWindow import *
-from EditDocInfo import *
-from deleteWindow import *
+from PyQt6.QtWidgets import QTableWidgetItem
 
+from py_files.MainWindow import *
+from py_files.addRecordWindow import *
+from py_files.addDocWindow import *
+from py_files.EditDocInfo import *
+from py_files.deleteDocWindow import *
+from py_files.deleteRecordWindow import *
+
+class UiMainWindow(Ui_MainWindow):
+    def draw_shedule(self):
+        for day in range(0,7):
+            self.shedule.setHorizontalHeaderItem(day, QTableWidgetItem(""))
+            self.shedule.horizontalHeaderItem(day).setText(str(date.today().day + day))
+        for time in range(0, 21):
+            self.shedule.setVerticalHeaderItem(time, QTableWidgetItem(""))
+            self.shedule.verticalHeaderItem(time).setText(Data["Times"][str(time)])
+    def draw_specs(self):
+        for spec in Data["Specs"]:
+            self.doctors_table.addItem(spec)
+    def draw_surnames(self, spec):
+        self.shedule.clear()
+        self.draw_shedule()
+        self.surnames_table.clear()
+        for doctor in Data["Doctors"][spec]:
+            self.surnames_table.addItem(doctor["Surname"] + " " + doctor["Name"] + " " + doctor["Patronymic"])
+    def draw_records(self,spec,doctorid):
+        self.shedule.clear()
+        self.draw_shedule()
+        for patient in Data["Doctors"][spec][doctorid]["Patients"]:
+            row = int(Data["Times_rev"][patient["Time"]])
+            column = int(patient["Date"]) - int(date.today().day)
+            mainwindowUI.shedule.setItem(row,column,QTableWidgetItem(""))
+            mainwindowUI.shedule.item(row,column).setText(patient["Surname"] + ' ' + patient["Name"][0] + "." + patient["Patronymic"] +".")
+
+class UiAddRecordWindow(Ui_AddingRecord):
+    pass
 
 class Patient:
-    def __init__(self, name, surname, patronymic, snils_number, polis_number, pasport_number):
+    def __init__(self, name, surname, patronymic, snils_number, polis_number, pasport_number, date, time):
         self.name = name
         self.surname = surname
         self.patronymic = patronymic
+        self.date = date
+        self.time = time
         self.snils_number = snils_number
         self.polis_number = polis_number
         self.pasport_number = pasport_number
-
-    appointments = []  # список словарей - запись(кабинет, время, дата, врач)
 
 class Doctor:
     def __init__(self, name, surname, patronymic, cabinet_number, experience, post):
@@ -30,94 +61,8 @@ class Doctor:
         self.experience = experience
         self.post = post
 
-    work_schedule = []
-
-class MainWindow(QtWidgets.QMainWindow):
-    def show(self):
-        self.showMaximized()
-
-    def draw_schedule(self):
-        for day in range(0, 7):
-            self.ui.shedule.horizontalHeaderItem(day).setText(str(int(datetime.date.today().day) + day))
-
-    def draw_doctorsList(self):
-        for spec in Data["Specs"]:
-            self.ui.doctors_table.addItem(spec)
-
-    def draw_surnamesList(self):
-        self.ui.surnames_table.clear()
-        for doctor in Data["Doctors"][self.ui.doctors_table.currentItem().text()]:
-            self.ui.surnames_table.addItem(doctor["Surname"] + ' ' + doctor["Name"] + ' ' + doctor["Patronymic"])
-
-class DeleteDocWindow(QtWidgets.QDialog):
-    pass
-
-class AddDocWindow(QtWidgets.QDialog):
-        def add_doctor(self):
-            spec = self.post.text()
-            name = self.name.text().title()
-            surname = self.surname.text().title()
-            patronymic = self.patronymic.text().title()
-            cab = self.cabinet.text()
-            exp = self.expirience.text()
-            info = {
-                "Name": name,
-                "Surname": surname,
-                "Patronymic": patronymic,
-                "Cabinet": cab,
-                "Experience": exp
-            }
-            Data["Doctors"][spec].append(info)
-            with open("Data.json", "w", encoding="utf8") as file:
-                json.dump(Data, file, indent=4)
-
-class EditWindow(QtWidgets.QDialog):
-        def draw_specs(self):
-            self.spec_comboBox.clear()
-            for spec in Data["Specs"]:
-                self.spec_comboBox.addItem(spec)
-
-        def draw_surnames(self):
-            self.doctors_table.clear()
-            spec = self.spec_comboBox.currentText()
-            for info in Data["Doctors"][spec]:
-                self.doctors_table.addItem(info["Surname"] + ' ' + info["Name"] + ' ' + info["Patronymic"])
-
-        def show_info(self):
-            spec = self.spec_comboBox.currentText()
-            index = self.doctors_table.currentRow()
-            info = Data["Doctors"][spec][index]
-            self.name_2.setText(info["Name"])
-            self.surname_2.setText(info["Surname"])
-            self.patronymic_2.setText(info["Patronymic"])
-            self.expirience_2.setText(info["Experience"])
-            self.cabinet_2.setText(info["Cabinet"])
-            self.post_2.setText(spec)
-
-        def accept_edit(self):
-            spec = self.spec_comboBox.currentText()
-            index = self.doctors_table.currentRow()
-            info = {
-                "Name": self.name_2.text(),
-                "Surname": self.surname_2.text(),
-                "Patronymic": self.patronymic_2.text(),
-                "Cabinet": self.cabinet_2.text(),
-                "Experience": self.expirience_2.text()
-            }
-            new_spec = self.post_2.text()
-            if spec != new_spec:
-                del Data["Doctors"][spec][index]
-                Data["Doctors"][new_spec].append(info)
-            else:
-                Data["Doctors"][spec][index] = info
-            with open("Data.json", "w", encoding="utf8") as file:
-                json.dump(Data, file, indent=4)
-
-class AddRecordWindow(QtWidgets.QDialog):
-    pass
-
-def initWindow(ui, windowClass):
-    window = windowClass()
+def initWindow(ui, window_class):
+    window = window_class
     ui.setupUi(window)
     return ui, window
 
@@ -130,22 +75,25 @@ if __name__ == '__main__':
     with open("Data.json", "r", encoding="utf8") as json_file:
         Data = json.load(json_file)
 
-    # Инициализация окон
-    MainWindow_ui, MainWindow = initWindow(Ui_MainWindow(), MainWindow)
-    addDocWindowUI, addDocWindow = initWindow(Ui_AddingDoc(), AddDocWindow)
-    editDocWindowUI, editDocWindow = initWindow(Ui_EditWindow(), EditWindow)
-    deleteDocWindowUI, deleteDocWindow = initWindow(Ui_DeleteWindow(), DeleteDocWindow)
-    AddingRecordUI, addRecordWindow = initWindow(Ui_AddingRecord(), AddRecordWindow)
-    MainWindow.show()
+    # Создание экземпляров окон
+    mainwindowUI, mainwindow = initWindow(UiMainWindow(),QtWidgets.QMainWindow())
+    addrecordwindowUI, addrecordwindow = initWindow(Ui_AddingRecord(),QtWidgets.QDialog())
+    deletedocwindowUI, deletedocwindow = initWindow(Ui_DeleteDocWindow(),QtWidgets.QDialog())
+    editdocwindowUI, editdocwindow = initWindow(Ui_EditWindow(),QtWidgets.QDialog())
+    adddocwindowUI, adddocwindow = initWindow(Ui_AddingDoc(),QtWidgets.QDialog())
+    deleterecordwindowUI, deleterecordwindow = initWindow(Ui_deleteRecordWindow(), QtWidgets.QDialog())
 
-    # События
-    MainWindow_ui.edit_doc_menu.triggered.connect(editDocWindow.show)
-    MainWindow_ui.add_doctor_menu.triggered.connect(addDocWindow.show)
-    MainWindow_ui.add_patient_menu.triggered.connect(addRecordWindow.show)
-    MainWindow_ui.remove_doctor_menu.triggered.connect(deleteDocWindow.show)
+    mainwindow.show()
+    mainwindowUI.draw_shedule()
+    mainwindowUI.draw_specs()
 
-    # Создание объектов
-    patient = Patient("Олег", "Комаров", "Викторович", "123456780000", "2142145323", "323421313")
-    doctor = Doctor("Владислав", "Хмелёв", "Анатольевич", 312, 5, "Кардиолог")
+    #События
+    mainwindowUI.doctors_table.itemSelectionChanged.connect(lambda : mainwindowUI.draw_surnames(mainwindowUI.doctors_table.currentItem().text()))
+    mainwindowUI.surnames_table.itemClicked.connect(lambda : mainwindowUI.draw_records(mainwindowUI.doctors_table.currentItem().text(), mainwindowUI.surnames_table.currentIndex().row()))
+    mainwindowUI.add_patient_menu.triggered.connect(lambda : addrecordwindow.show())
+    mainwindowUI.remove_doctor_menu.triggered.connect(lambda: deletedocwindow.show())
+    mainwindowUI.edit_doc_menu.triggered.connect(lambda: editdocwindow.show())
+    mainwindowUI.add_doctor_menu.triggered.connect(lambda: adddocwindow.show())
+    mainwindowUI.remove_patient_menu.triggered.connect(lambda: deleterecordwindow.show())
 
     sys.exit(app.exec())

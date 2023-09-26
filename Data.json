@@ -7,6 +7,52 @@
         "Otolaryngologist",
         "Pediatrician"
     ],
+    "Times": {
+        "0": "8:00",
+        "1": "8:20",
+        "2": "8:40",
+        "3": "9:00",
+        "4": "9:20",
+        "5": "9:40",
+        "6": "10:00",
+        "7": "10:20",
+        "8": "10:40",
+        "9": "11:00",
+        "10": "11:20",
+        "11": "11:40",
+        "12": "12:00",
+        "13": "12:20",
+        "14": "12:40",
+        "15": "13:00",
+        "16": "13:20",
+        "17": "13:40",
+        "18": "14:00",
+        "19": "14:20",
+        "20": "14:40"
+    },
+    "Times_rev": {
+        "8:00" : "0",
+        "8:20" : "1",
+        "8:40" : "2",
+        "9:00": "3",
+        "9:20": "4",
+        "9:40": "5",
+        "10:00": "6",
+        "10:20": "7",
+        "10:40": "8",
+        "11:00": "9",
+        "11:20": "10",
+        "11:40": "11",
+        "12:00": "12",
+        "12:20": "13",
+        "12:40": "14",
+        "13:00": "15",
+        "13:20": "16",
+        "13:40": "17",
+        "14:00": "18",
+        "14:20": "19",
+        "14:40": "20"
+    },
     "Doctors": {
         "Cardiologist": [
             {
@@ -14,7 +60,49 @@
                 "Surname": "Shvetsov",
                 "Patronymic": "Aleksandrovich",
                 "Cabinet": "135",
-                "Experience": "4"
+                "Experience": "4",
+                "Patients": [
+                {
+                    "Name": "Ivan",
+                    "Surname": "Karasev ",
+                    "Patronymic": "Artyomovich",
+                    "Date" : "27",
+                    "Time" : "8:00",
+                    "SNILS": "86509516841",
+                    "OMS": "7049254521824547",
+                    "Passport": "4490618820"
+                },
+                {
+                    "Name": "Yana",
+                    "Surname": "Potapova",
+                    "Patronymic": "Sergeevna",
+                    "Date" : "27",
+                    "Time" : "8:20",
+                    "SNILS": "74708502006",
+                    "OMS": "4699244290334800",
+                    "Passport": "4454216997"
+                },
+                {
+                    "Name": "Elizaveta ",
+                    "Surname": "Belova ",
+                    "Patronymic": "Semyonovna",
+                    "Date" : "27",
+                    "Time" : "8:40",
+                    "SNILS": "14274932368",
+                    "OMS": "7735727585009991",
+                    "Passport": "4738689701"
+                },
+                {
+                    "Name": "Vadim ",
+                    "Surname": "Kozlov ",
+                    "Patronymic": "Kirillovich",
+                    "Date" : "27",
+                    "Time" : "9:00",
+                    "SNILS": "54462899733",
+                    "OMS": "7989442379728313",
+                    "Passport": "4696413133"
+                }
+            ]
             }
         ],
         "Surgeon": [
@@ -23,7 +111,49 @@
                 "Surname": "Tikhonov",
                 "Patronymic": "Daniilovich",
                 "Cabinet": "356",
-                "Experience": "10"
+                "Experience": "10",
+                "Patients": [
+                {
+                    "Name": "Ivan",
+                    "Surname": "Karasev ",
+                    "Patronymic": "Artyomovich",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "86509516841",
+                    "OMS": "7049254521824547",
+                    "Passport": "4490618820"
+                },
+                {
+                    "Name": "Yana",
+                    "Surname": "Potapova",
+                    "Patronymic": "Sergeevna",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "74708502006",
+                    "OMS": "4699244290334800",
+                    "Passport": "4454216997"
+                },
+                {
+                    "Name": "Elizaveta ",
+                    "Surname": "Belova ",
+                    "Patronymic": "Semyonovna",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "14274932368",
+                    "OMS": "7735727585009991",
+                    "Passport": "4738689701"
+                },
+                {
+                    "Name": "Vadim ",
+                    "Surname": "Kozlov ",
+                    "Patronymic": "Kirillovich",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "54462899733",
+                    "OMS": "7989442379728313",
+                    "Passport": "4696413133"
+                }
+            ]
             }
         ],
         "Therapist": [
@@ -32,7 +162,49 @@
                 "Surname": "Rusakov",
                 "Patronymic": "Tikhonovich",
                 "Cabinet": "325",
-                "Experience": "14"
+                "Experience": "14",
+                "Patients": [
+                {
+                    "Name": "Ivan",
+                    "Surname": "Karasev ",
+                    "Patronymic": "Artyomovich",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "86509516841",
+                    "OMS": "7049254521824547",
+                    "Passport": "4490618820"
+                },
+                {
+                    "Name": "Yana",
+                    "Surname": "Potapova",
+                    "Patronymic": "Sergeevna",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "74708502006",
+                    "OMS": "4699244290334800",
+                    "Passport": "4454216997"
+                },
+                {
+                    "Name": "Elizaveta ",
+                    "Surname": "Belova ",
+                    "Patronymic": "Semyonovna",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "14274932368",
+                    "OMS": "7735727585009991",
+                    "Passport": "4738689701"
+                },
+                {
+                    "Name": "Vadim ",
+                    "Surname": "Kozlov ",
+                    "Patronymic": "Kirillovich",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "54462899733",
+                    "OMS": "7989442379728313",
+                    "Passport": "4696413133"
+                }
+            ]
             }
         ],
         "Neurologist": [
@@ -41,14 +213,98 @@
                 "Surname": "Popov",
                 "Patronymic": "Dmitrievich",
                 "Cabinet": "353",
-                "Experience": "6"
+                "Experience": "6",
+                "Patients": [
+                {
+                    "Name": "Ivan",
+                    "Surname": "Karasev ",
+                    "Patronymic": "Artyomovich",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "86509516841",
+                    "OMS": "7049254521824547",
+                    "Passport": "4490618820"
+                },
+                {
+                    "Name": "Yana",
+                    "Surname": "Potapova",
+                    "Patronymic": "Sergeevna",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "74708502006",
+                    "OMS": "4699244290334800",
+                    "Passport": "4454216997"
+                },
+                {
+                    "Name": "Elizaveta ",
+                    "Surname": "Belova ",
+                    "Patronymic": "Semyonovna",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "14274932368",
+                    "OMS": "7735727585009991",
+                    "Passport": "4738689701"
+                },
+                {
+                    "Name": "Vadim ",
+                    "Surname": "Kozlov ",
+                    "Patronymic": "Kirillovich",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "54462899733",
+                    "OMS": "7989442379728313",
+                    "Passport": "4696413133"
+                }
+            ]
             },
             {
                 "Name": "Evgeniy",
                 "Surname": "Smirnov",
                 "Patronymic": "Kirilovich",
                 "Cabinet": "438",
-                "Experience": "5"
+                "Experience": "5",
+                "Patients": [
+                {
+                    "Name": "Ivan",
+                    "Surname": "Karasev ",
+                    "Patronymic": "Artyomovich",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "86509516841",
+                    "OMS": "7049254521824547",
+                    "Passport": "4490618820"
+                },
+                {
+                    "Name": "Yana",
+                    "Surname": "Potapova",
+                    "Patronymic": "Sergeevna",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "74708502006",
+                    "OMS": "4699244290334800",
+                    "Passport": "4454216997"
+                },
+                {
+                    "Name": "Elizaveta ",
+                    "Surname": "Belova ",
+                    "Patronymic": "Semyonovna",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "14274932368",
+                    "OMS": "7735727585009991",
+                    "Passport": "4738689701"
+                },
+                {
+                    "Name": "Vadim ",
+                    "Surname": "Kozlov ",
+                    "Patronymic": "Kirillovich",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "54462899733",
+                    "OMS": "7989442379728313",
+                    "Passport": "4696413133"
+                }
+            ]
             }
         ],
         "Otolaryngologist": [
@@ -57,51 +313,101 @@
                 "Surname": "Zinchenko",
                 "Patronymic": "Efremovich",
                 "Cabinet": "134",
-                "Experience": "3"
+                "Experience": "3",
+                "Patients": [
+                    {
+                        "Name": "Kseniya",
+                        "Surname": "Chernysheva",
+                        "Patronymic": "Glebovna",
+                        "Date": "30",
+                        "Time": "8:20",
+                        "SNILS": "86509516841",
+                        "OMS": "7049254521824547",
+                        "Passport": "4490618820"
+                    },
+                    {
+                        "Name": "Sofiya",
+                        "Surname": "Frolova",
+                        "Patronymic": "Emirovna",
+                        "Date": "30",
+                        "Time": "8:40",
+                        "SNILS": "74708502006",
+                        "OMS": "4699244290334800",
+                        "Passport": "4454216997"
+                    },
+                    {
+                        "Name": "Elizaveta ",
+                        "Surname": "Belova ",
+                        "Patronymic": "Semyonovna",
+                        "Date": "30",
+                        "Time": "9:00",
+                        "SNILS": "14274932368",
+                        "OMS": "7735727585009991",
+                        "Passport": "4738689701"
+                    },
+                    {
+                        "Name": "Mariya",
+                        "Surname": "Eliseeva",
+                        "Patronymic": "Gordeevna",
+                        "Date": "30",
+                        "Time": "9:20",
+                        "SNILS": "54462899733",
+                        "OMS": "7989442379728313",
+                        "Passport": "4696413133"
+                    }
+                ]
             }
         ],
         "Pediatrician": [
             {
-                "Name": "Ivan",
-                "Surname": "Seliverstov",
-                "Patronymic": "Evgenievich",
+                "Name": "Eva",
+                "Surname": "Vorobeva",
+                "Patronymic": "Vyacheslavovna",
                 "Cabinet": "254",
-                "Experience": "2"
+                "Experience": "2",
+                "Patients": [
+                {
+                    "Name": "Karina",
+                    "Surname": "Matveeva",
+                    "Patronymic": "Egorovna",
+                    "Date" : "30",
+                    "Time" : "10:20",
+                    "SNILS": "86509516841",
+                    "OMS": "7049254521824547",
+                    "Passport": "4490618820"
+                },
+                {
+                    "Name": "Yana",
+                    "Surname": "Gorbacheva",
+                    "Patronymic": "Sergeevna",
+                    "Date" : "30",
+                    "Time" : "10:40",
+                    "SNILS": "74708502006",
+                    "OMS": "4699244290334800",
+                    "Passport": "4454216997"
+                },
+                {
+                    "Name": "Karaseva",
+                    "Surname": "Karaseva",
+                    "Patronymic": "Artemovna",
+                    "Date" : "30",
+                    "Time" : "11:00",
+                    "SNILS": "14274932368",
+                    "OMS": "7735727585009991",
+                    "Passport": "4738689701"
+                },
+                {
+                    "Name": "Ulyana",
+                    "Surname": "Klimova",
+                    "Patronymic": "Ivanovna",
+                    "Date" : "30",
+                    "Time" : "11:20",
+                    "SNILS": "54462899733",
+                    "OMS": "7989442379728313",
+                    "Passport": "4696413133"
+                }
+            ]
             }
         ]
-    },
-    "Patients": [
-        {
-            "Name": "Ivan",
-            "Surname": "Karasev ",
-            "Patronymic": "Artyomovich",
-            "SNILS": "86509516841",
-            "OMS": "7049254521824547",
-            "Passport": "4490618820"
-        },
-        {
-            "Name": "Yana",
-            "Surname": "Potapova",
-            "Patronymic": "Sergeevna",
-            "SNILS": "74708502006",
-            "OMS": "4699244290334800",
-            "Passport": "4454216997"
-        },
-        {
-            "Name": "Elizaveta ",
-            "Surname": "Belova ",
-            "Patronymic": "Semyonovna",
-            "SNILS": "14274932368",
-            "OMS": "7735727585009991",
-            "Passport": "4738689701"
-        },
-        {
-            "Name": "Vadim ",
-            "Surname": "Kozlov ",
-            "Patronymic": "Kirillovich",
-            "SNILS": "54462899733",
-            "OMS": "7989442379728313",
-            "Passport": "4696413133"
-        }
-    ]
+    }
 }
