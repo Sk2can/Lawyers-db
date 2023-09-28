@@ -4,3 +4,4 @@ pyuic6 -o C:\Users\khmel\Desktop\Projects\patients_record\py_files\addRecordWind
 pyuic6 -o C:\Users\khmel\Desktop\Projects\patients_record\py_files\EditDocInfo.py C:\Users\khmel\Desktop\Projects\patients_record\UI\EditDocInfo.ui
 pyuic6 -o C:\Users\khmel\Desktop\Projects\patients_record\py_files\deleteDocWindow.py C:\Users\khmel\Desktop\Projects\patients_record\UI\deleteDocWindow.ui
 pyuic6 -o C:\Users\khmel\Desktop\Projects\patients_record\py_files\deleteRecordWindow.py C:\Users\khmel\Desktop\Projects\patients_record\UI\deleteRecordWindow.ui
+pyuic6 -o C:\Users\khmel\Desktop\Projects\patients_record\py_files\addPatientWindow.py C:\Users\khmel\Desktop\Projects\patients_record\UI\addPatientWindow.ui

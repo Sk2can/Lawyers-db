@@ -32,291 +32,281 @@
    <string>Doctor's shedule</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>31</y>
-      <width>1851</width>
-      <height>991</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,2">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="10,5">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout" stretch="6,10">
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
-           <item>
-            <widget class="QLabel" name="label">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Specialization</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QListWidget" name="doctors_table">
-             <property name="font">
-              <font>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="verticalScrollBarPolicy">
-              <enum>Qt::ScrollBarAsNeeded</enum>
-             </property>
-             <property name="editTriggers">
-              <set>QAbstractItemView::NoEditTriggers</set>
-             </property>
-             <property name="viewMode">
-              <enum>QListView::ListMode</enum>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout">
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Doctors names </string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QListWidget" name="surnames_table">
-             <property name="font">
-              <font>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="QCalendarWidget" name="calendarWidget">
-         <property name="font">
-          <font>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="gridVisible">
-          <bool>true</bool>
-         </property>
-         <property name="selectionMode">
-          <enum>QCalendarWidget::NoSelection</enum>
-         </property>
-         <property name="horizontalHeaderFormat">
-          <enum>QCalendarWidget::ShortDayNames</enum>
-         </property>
-         <property name="verticalHeaderFormat">
-          <enum>QCalendarWidget::NoVerticalHeader</enum>
-         </property>
-         <property name="navigationBarVisible">
-          <bool>true</bool>
-         </property>
-         <property name="dateEditEnabled">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QTableWidget" name="shedule">
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-         <bold>true</bold>
-        </font>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3" stretch="10,5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="6,10">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <pointsize>16</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Специальность</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="doctors_table">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="viewMode">
+             <enum>QListView::ListMode</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <pointsize>16</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Доктор</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="surnames_table">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QCalendarWidget" name="calendarWidget">
+        <property name="font">
+         <font>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="gridVisible">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QCalendarWidget::NoSelection</enum>
+        </property>
+        <property name="horizontalHeaderFormat">
+         <enum>QCalendarWidget::ShortDayNames</enum>
+        </property>
+        <property name="verticalHeaderFormat">
+         <enum>QCalendarWidget::NoVerticalHeader</enum>
+        </property>
+        <property name="navigationBarVisible">
+         <bool>true</bool>
+        </property>
+        <property name="dateEditEnabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="shedule">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>140</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>24</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>33</number>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>8:00</string>
        </property>
-       <property name="sizeAdjustPolicy">
-        <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </row>
+      <row>
+       <property name="text">
+        <string>8:20</string>
        </property>
-       <attribute name="horizontalHeaderCascadingSectionResizes">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>140</number>
-       </attribute>
-       <attribute name="verticalHeaderVisible">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="verticalHeaderCascadingSectionResizes">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="verticalHeaderMinimumSectionSize">
-        <number>24</number>
-       </attribute>
-       <attribute name="verticalHeaderDefaultSectionSize">
-        <number>33</number>
-       </attribute>
-       <attribute name="verticalHeaderStretchLastSection">
-        <bool>false</bool>
-       </attribute>
-       <row>
-        <property name="text">
-         <string>8:00</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>8:20</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>8:40</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>9:00</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>9:20</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>9:40</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>10:00</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>10:20</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>10:40</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>11:00</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>11:20</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>11:40</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>12:00</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>12:20</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>12:40</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>13:00</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>13:20</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>13:40</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>14:00</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>14:20</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>14:40</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string/>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string/>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string/>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string/>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string/>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string/>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string/>
-        </property>
-       </column>
-      </widget>
-     </item>
-    </layout>
-   </widget>
+      </row>
+      <row>
+       <property name="text">
+        <string>8:40</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>9:00</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>9:20</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>9:40</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>10:00</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>10:20</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>10:40</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>11:00</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>11:20</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>11:40</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>12:00</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>12:20</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>12:40</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>13:00</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>13:20</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>13:40</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>14:00</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>14:20</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>14:40</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -334,11 +324,12 @@
     <property name="separatorsCollapsible">
      <bool>false</bool>
     </property>
-    <addaction name="add_doctor_menu"/>
+    <addaction name="register_patient"/>
     <addaction name="add_patient_menu"/>
-    <addaction name="remove_doctor_menu"/>
     <addaction name="remove_patient_menu"/>
+    <addaction name="add_doctor_menu"/>
     <addaction name="edit_doc_menu"/>
+    <addaction name="remove_doctor_menu"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -365,6 +356,11 @@
   <action name="edit_doc_menu">
    <property name="text">
     <string>Редактировать врача</string>
+   </property>
+  </action>
+  <action name="register_patient">
+   <property name="text">
+    <string>Зарегистрировать пациента</string>
    </property>
   </action>
  </widget>
